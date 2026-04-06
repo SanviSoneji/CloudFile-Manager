@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloud File Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>☁️ Cloud File Manager</h2>
+    <p id="userEmail"></p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Auth Box -->
+    <div class="auth-box">
+      <h3>Auth</h3>
+
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+
+      <br><br>
+
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="signIn()">Login</button>
+      <button onclick="signOut()">Logout</button>
+    </div>
+
+    <!-- Upload Section -->
+    <div id="uploadSection" class="upload-box" style="display:none;">
+      <input type="file" id="fileInput">
+      <button onclick="uploadFile(event)">Upload</button>
+    </div>
+
+    <div id="filesSection" style="display:none;">
+  <h3 style="text-align:center;">Files</h3>
+  <div id="fileList" class="file-grid"></div>
+</div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
